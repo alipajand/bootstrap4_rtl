@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "license": "MIT",
     "scripts": {},
+    "main": "assets/sass/_rtl.scss",
     "private": false,
     "repository": {
         "url": "https://github.com/alipajand/bootstrap4RTL",
