@@ -230,28 +230,33 @@
             $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
             @each $size, $length in $spacers {
-                .mr#{$infix}-#{$size},
-                .mx#{$infix}-#{$size} {
-                    margin-#{$right}: $length !important;
+                .mr#{$infix}-#{$size} {
+                    margin-#{$right}: 0 !important;
                     margin-#{$left}: $length !important;
                 }
-                .ml#{$infix}-#{$size},
-                .mx#{$infix}-#{$size} {
-                    margin-#{$left}: $length !important;
+                .ml#{$infix}-#{$size} {
                     margin-#{$right}: $length !important;
+                    margin-#{$left}: 0 !important;
+                }
+
+                .mx#{$infix}-#{$size} {
+                    margin-#{$right}: $length !important;
+                    margin-#{$left}: $length !important;
                 }
             }
 
             @each $size, $length in $spacers {
-                .pr#{$infix}-#{$size},
-                .px#{$infix}-#{$size} {
-                    padding-#{$right}: auto !important;
+                .pr#{$infix}-#{$size}{
+                    padding-#{$right}: 0 !important;
                     padding-#{$left}: $length !important;
                 }
-                .pl#{$infix}-#{$size},
-                .px#{$infix}-#{$size} {
-                    padding-#{$left}: auto !important;
+                .pl#{$infix}-#{$size}{
                     padding-#{$right}: $length !important;
+                    padding-#{$left}: 0 !important;
+                }
+                .px#{$infix}-#{$size} {
+                    padding-#{$right}: $length !important;
+                    padding-#{$left}: $length !important;
                 }
             }
 

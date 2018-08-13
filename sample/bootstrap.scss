@@ -1,9 +1,0 @@
-﻿// add bootstrap
-@import 'themes/variables';
-@import 'themes/direction-rtl';
-@import '../node_modules/bootstrap/scss/mixins';
-@import '../node_modules/bootstrap/scss/functions';
-@import '../node_modules/bootstrap/scss/bootstrap';
-
-// add bootstrap theme in your project after bootstrap original files and variables
-@import '../assets/sass/rtl';
