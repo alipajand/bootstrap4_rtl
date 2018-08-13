@@ -1,6 +1,6 @@
 {
     "name": "sass-bootstrap4rtl",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "license": "MIT",
     "scripts": {},
     "main": "assets/sass/_rtl.scss",
