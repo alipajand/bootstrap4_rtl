@@ -5,5 +5,5 @@
 @import '../node_modules/bootstrap/scss/functions';
 @import '../node_modules/bootstrap/scss/bootstrap';
 
-// add bootstrap theme
-@import 'themes/rtl';
+// add bootstrap theme in your project after bootstrap original files and variables
+@import '../assets/sass/rtl';
