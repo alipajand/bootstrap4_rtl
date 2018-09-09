@@ -1,9 +1,9 @@
 {
     "name": "sass-bootstrap4rtl",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "license": "MIT",
-    "scripts": {},
     "main": "assets/sass/_rtl.scss",
+    "scripts": {},
     "private": false,
     "repository": {
         "url": "https://github.com/alipajand/bootstrap4RTL",
