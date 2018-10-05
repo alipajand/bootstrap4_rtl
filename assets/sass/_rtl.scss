@@ -241,25 +241,26 @@
             }
 
             @each $size, $length in $spacers {
-                .pr#{$infix}-#{$size}{
+                .pr#{$infix}-#{$size} {
                     padding-#{$right}: 0 !important;
                     padding-#{$left}: $length !important;
                 }
-                .pl#{$infix}-#{$size}{
+                .pl#{$infix}-#{$size} {
                     padding-#{$right}: $length !important;
                     padding-#{$left}: 0 !important;
                 }
             }
-
-            .mr#{$infix}-auto,
-            .mx#{$infix}-auto {
+            .mr#{$infix}-auto {
                 margin-#{$right}: 0 !important;
                 margin-#{$left}: auto !important;
             }
-            .ml#{$infix}-auto,
-            .mx#{$infix}-auto {
+            .ml#{$infix}-auto {
                 margin-#{$right}: auto !important;
                 margin-#{$left}: 0 !important;
+            }
+            .mx#{$infix}-auto {
+                margin-#{$right}: auto !important;
+                margin-#{$left}: auto !important;
             }
         }
     }
