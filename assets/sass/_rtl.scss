@@ -242,21 +242,21 @@
 
             @each $size, $length in $spacers {
                 .pr#{$infix}-#{$size} {
-                    padding-#{$right}: inherit;
                     padding-#{$left}: $length !important;
+                    padding-#{$right}: inherit !important;
                 }
                 .pl#{$infix}-#{$size} {
+                    padding-#{$left}: inherit !important;
                     padding-#{$right}: $length !important;
-                    padding-#{$left}: inherit;
                 }
             }
             .mr#{$infix}-auto {
-                margin-#{$right}: inherit;
                 margin-#{$left}: auto !important;
+                margin-#{$right}: inherit !important;
             }
             .ml#{$infix}-auto {
                 margin-#{$right}: auto !important;
-                margin-#{$left}: inherit;
+                margin-#{$left}: inherit !important;
             }
         }
     }
