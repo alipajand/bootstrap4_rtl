@@ -24,7 +24,7 @@
         padding-#{$right}: 1.25rem;
     }
 
-    .dropdown-menu {
+    .dropdown-menu:not(.dropdown-menu-left) {
         #{$right}: 0;
         text-align: $right;
     }
@@ -242,25 +242,21 @@
 
             @each $size, $length in $spacers {
                 .pr#{$infix}-#{$size} {
-                    padding-#{$right}: 0 !important;
+                    padding-#{$right}: inherit;
                     padding-#{$left}: $length !important;
                 }
                 .pl#{$infix}-#{$size} {
                     padding-#{$right}: $length !important;
-                    padding-#{$left}: 0 !important;
+                    padding-#{$left}: inherit;
                 }
             }
             .mr#{$infix}-auto {
-                margin-#{$right}: 0 !important;
+                margin-#{$right}: inherit;
                 margin-#{$left}: auto !important;
             }
             .ml#{$infix}-auto {
                 margin-#{$right}: auto !important;
-                margin-#{$left}: 0 !important;
-            }
-            .mx#{$infix}-auto {
-                margin-#{$right}: auto !important;
-                margin-#{$left}: auto !important;
+                margin-#{$left}: inherit;
             }
         }
     }
