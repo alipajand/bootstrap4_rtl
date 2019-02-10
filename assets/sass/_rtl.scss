@@ -10,11 +10,6 @@
         float: right;
     }
 
-    .navbar-nav .nav-item + .nav-item {
-        margin-#{$right}: $spacer;
-        margin-#{$left}: inherit;
-    }
-
     th {
         text-align: right;
     }
