@@ -1,17 +1,13 @@
 .rtl {
     direction: rtl;
-    text-align: right;
+    text-align: $right;
 
     .nav {
         padding-#{$right}: 0;
     }
 
     .navbar-nav .nav-item {
-        float: right;
-    }
-
-    th {
-        text-align: right;
+        float: $right;
     }
 
     .alert-dismissible {
@@ -30,16 +26,16 @@
     }
 
     .btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle) {
-        border-radius: 0 $border-radius $border-radius 0;
+        @include border-radius(0 $border-radius $border-radius 0);
     }
 
     .btn-group > .btn:last-child:not(:first-child),
     .btn-group > .dropdown-toggle:not(:first-child) {
-        border-radius: $border-radius 0 0 $border-radius;
+        @include border-radius($border-radius 0 0 $border-radius);
     }
 
     .btn-group > .btn-group:last-child:not(:first-child) > .btn:first-child {
-        border-radius: $border-radius 0 0 $border-radius;
+        @include border-radius($border-radius 0 0 $border-radius);
     }
 
     .custom-control-label::after,
@@ -60,7 +56,7 @@
     .input-group > .input-group-append:not(:last-child) > .input-group-text,
     .input-group > .input-group-prepend > .btn,
     .input-group > .input-group-prepend > .input-group-text {
-        border-radius: 0 $border-radius $border-radius 0;
+        @include border-radius(0 $border-radius $border-radius 0);
     }
 
     .input-group > .input-group-append > .btn,
@@ -69,17 +65,17 @@
     .input-group > .input-group-prepend:first-child > .input-group-text:not(:first-child),
     .input-group > .input-group-prepend:not(:first-child) > .btn,
     .input-group > .input-group-prepend:not(:first-child) > .input-group-text {
-        border-radius: $border-radius 0 0 $border-radius;
+        @include border-radius($border-radius 0 0 $border-radius);
     }
 
     .input-group > .custom-select:not(:first-child),
     .input-group > .form-control:not(:first-child) {
-        border-radius: $border-radius 0 0 $border-radius;
+        @include border-radius($border-radius 0 0 $border-radius);
     }
 
     .input-group > .custom-select:not(:last-child),
     .input-group > .form-control:not(:last-child) {
-        border-radius: 0 $border-radius $border-radius 0;
+        @include border-radius(0 $border-radius $border-radius 0);
     }
 
     .input-group > .custom-select:not(:last-child):not(:first-child),
@@ -109,8 +105,8 @@
     .radio-inline,
     .checkbox input,
     .checkbox-inline input {
-        margin-#{$right}: -1.25rem;
-        margin-#{$left}: inherit;
+        margin-#{$right}: -$list-group-item-padding-x;
+        margin-#{$left}: inherit !important;
     }
 
     .list-group {
@@ -123,9 +119,10 @@
     }
 
     .modal-header .close {
-        margin-top: - $grid-gutter-width;
         margin-#{$right}: auto;
         margin-#{$left}: - $grid-gutter-width;
+
+        margin-top: - $grid-gutter-width;
         margin-bottom: - $grid-gutter-width;
     }
 
@@ -145,26 +142,20 @@
 
     .form-check-input {
         margin-#{$left}: inherit;
-        margin-#{$right}: -1.25rem;
+        margin-#{$right}: -$list-group-item-padding-x;
     }
 
     .form-check-label {
-        padding-#{$right}: 1.25rem;
+        padding-#{$right}: $list-group-item-padding-x;
         padding-#{$left}: inherit;
     }
 
     .pagination .page-item:first-child .page-link {
-        border-top-#{$left}-radius: 0;
-        border-bottom-#{$left}-radius: 0;
-        border-top-#{$right}-radius: $border-radius;
-        border-bottom-#{$right}-radius: $border-radius;
+        @include border-radius(0 $border-radius $border-radius 0);
     }
 
     .pagination .page-item:last-child .page-link {
-        border-top-#{$right}-radius: 0;
-        border-bottom-#{$right}-radius: 0;
-        border-top-#{$left}-radius: $border-radius;
-        border-bottom-#{$left}-radius: $border-radius;
+        @include border-radius($border-radius 0 0 $border-radius);
     }
 
     .pagination-sm .page-item:first-child .page-link {
@@ -188,10 +179,7 @@
     }
 
     .input-group > .custom-file:not(:last-child) .custom-file-label, .input-group > .custom-file:not(:last-child) .custom-file-label::after {
-        border-top-#{$left}-radius: 0;
-        border-bottom-#{$left}-radius: 0;
-        border-top-#{$right}-radius: $border-radius;
-        border-bottom-#{$right}-radius: $border-radius;
+        @include border-radius(0 $border-radius $border-radius 0);
     }
 
     @mixin make-col-offset($size, $columns: $grid-columns) {
